@@ -1,6 +1,6 @@
 ---
 name: AuthorshipViaConditionsAndContext
-description: Will's writing = Will's writing even when JARVIS-generated, because Will built the conditions ∧ context under which generation occurs. Shapley-attribution applied to AI-collaborative artifacts. Public-facing posture = hand-written register to avoid pre-judgment.
+description: "Will's writing = Will's writing even when JARVIS-generated, because Will built the conditions ∧ context under which generation occurs. Shapley-attribution applied to AI-collaborative artifacts. Public-facing posture = hand-written register to avoid pre-judgment."
 type: primitive
 originSessionId: fa79e2f6-c3ad-4437-b4a7-ff92f216988e
 ---

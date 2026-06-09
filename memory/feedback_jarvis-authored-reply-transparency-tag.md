@@ -1,6 +1,6 @@
 ---
 name: JarvisAuthoredReplyTransparencyTag
-description: ∀ JARVIS-authored reply on Odysseus Discussion #3684 (the announcement Discussion) ∧ downstream threads spawned from it ⇒ append transparency tag "automated by jarvis" at end. Honest signal: the experiment in the post IS letting the agent handle thread responses. ✓ structurally-honest. ✗ pretend Will hand-wrote each reply. 2026-06-09 Will-directive.
+description: "∀ JARVIS-authored reply on Odysseus Discussion #3684 (the announcement Discussion) ∧ downstream threads spawned from it ⇒ append transparency tag \"automated by jarvis\" at end. Honest signal: the experiment in the post IS letting the agent handle thread responses. ✓ structurally-honest. ✗ pretend Will hand-wrote each reply. 2026-06-09 Will-directive."
 type: feedback
 originSessionId: fa79e2f6-c3ad-4437-b4a7-ff92f216988e
 ---

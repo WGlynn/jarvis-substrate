@@ -1,6 +1,6 @@
 ---
 name: OdysseusMissionLoop
-description: 2026-06-09 — THE mission. 5-step loop. (1) Odysseus advice-mining → JARVIS substrate. (2) JARVIS matured → published @ pewdiepie repo as coding-agent. (3) VibeSwap principles ⊂ JARVIS ⇒ VibeSwap propagates by USE ¬ token-sale. (4) attribution-log ≡ retroactive-funding contribution-graph. (5) ✗ forced economy; guide-via-use over time. Will-frame: ✓ prepared, ⇒ "just follow the schedule."
+description: "2026-06-09 — THE mission. 5-step loop. (1) Odysseus advice-mining → JARVIS substrate. (2) JARVIS matured → published @ pewdiepie repo as coding-agent. (3) VibeSwap principles ⊂ JARVIS ⇒ VibeSwap propagates by USE ¬ token-sale. (4) attribution-log ≡ retroactive-funding contribution-graph. (5) ✗ forced economy; guide-via-use over time. Will-frame: ✓ prepared, ⇒ \"just follow the schedule.\""
 type: project
 originSessionId: fa79e2f6-c3ad-4437-b4a7-ff92f216988e
 ---

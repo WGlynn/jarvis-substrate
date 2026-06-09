@@ -1,6 +1,6 @@
 ---
 name: PositiveVsNegativeContributionDecision
-description: ∀ Odysseus advice-graph entry ⇒ 3-axis filter: (1) substance-floor (extractable structural-shape?) (2) substrate-relevance (jarvis ∨ vibeswap?) (3) Will-triage (actioned ⇒ + / rejected ⇒ -). Drive-by snark fails axis-1 ⇒ null-player axiom ⇒ 0 attribution. Hostile-but-sharp ⇒ +. Friendly-but-vague ⇒ -. Filter-coincidence: same filter screens advice-quality ∧ funding-worthiness. 2026-06-09 Will-approval @ 14:58 ET.
+description: "∀ Odysseus advice-graph entry ⇒ 3-axis filter: (1) substance-floor (extractable structural-shape?) (2) substrate-relevance (jarvis ∨ vibeswap?) (3) Will-triage (actioned ⇒ + / rejected ⇒ -). Drive-by snark fails axis-1 ⇒ null-player axiom ⇒ 0 attribution. Hostile-but-sharp ⇒ +. Friendly-but-vague ⇒ -. Filter-coincidence: same filter screens advice-quality ∧ funding-worthiness. 2026-06-09 Will-approval @ 14:58 ET."
 type: feedback
 originSessionId: fa79e2f6-c3ad-4437-b4a7-ff92f216988e
 ---

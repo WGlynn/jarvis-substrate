@@ -1,6 +1,6 @@
 ---
 name: SpecVsDeployedSeverityCalibration
-description: ∀ C5 architecture review ⇒ severity tier MUST distinguish deployed-state from spec-only. Spec-only code w/ logical bugs ≡ zero user impact + zero bounty. Deployed code ≡ real surface ≡ real severity. WWWD gate 2026-06-08 flagged JARVIS for mixing phases in vibeswap-ckb review.
+description: "∀ C5 architecture review ⇒ severity tier MUST distinguish deployed-state from spec-only. Spec-only code w/ logical bugs ≡ zero user impact + zero bounty. Deployed code ≡ real surface ≡ real severity. WWWD gate 2026-06-08 flagged JARVIS for mixing phases in vibeswap-ckb review."
 type: feedback
 originSessionId: fa79e2f6-c3ad-4437-b4a7-ff92f216988e
 ---

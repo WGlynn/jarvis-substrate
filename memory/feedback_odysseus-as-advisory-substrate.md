@@ -1,6 +1,6 @@
 ---
 name: OdysseusAsAdvisorySubstrate
-description: ∀ Odysseus thread ⇒ READ for technical advice senior devs give pewdiepie (recognized non-dev). Same advice often applies to VibeSwap/JARVIS substrate (recognized non-dev-built-with-AI). Two-axis filter: (a) directly-applies-to-our-substrate ⇒ queue for action, (b) generic-pattern-worth-remembering ⇒ feedback primitive. Mission isn't only outgoing dispatch; siphon the collective wisdom into our own codebase. Will 2026-06-09.
+description: "∀ Odysseus thread ⇒ READ for technical advice senior devs give pewdiepie (recognized non-dev). Same advice often applies to VibeSwap/JARVIS substrate (recognized non-dev-built-with-AI). Two-axis filter: (a) directly-applies-to-our-substrate ⇒ queue for action, (b) generic-pattern-worth-remembering ⇒ feedback primitive. Mission isn't only outgoing dispatch; siphon the collective wisdom into our own codebase. Will 2026-06-09."
 type: feedback
 originSessionId: fa79e2f6-c3ad-4437-b4a7-ff92f216988e
 ---

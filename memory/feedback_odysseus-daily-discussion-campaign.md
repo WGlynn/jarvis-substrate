@@ -1,6 +1,6 @@
 ---
 name: OdysseusDailyDiscussionCampaign
-description: 1 substantive Discussion per day on pewdiepie-archdaemon/odysseus, drawn from VibeSwap/JARVIS monorepo, each mathematically-justifiable as repo-convergence (proof = quality-check filter, NOT included in post). Consistency over virality. 365-post horizon. Started 2026-06-06.
+description: "1 substantive Discussion per day on pewdiepie-archdaemon/odysseus, drawn from VibeSwap/JARVIS monorepo, each mathematically-justifiable as repo-convergence (proof = quality-check filter, NOT included in post). Consistency over virality. 365-post horizon. Started 2026-06-06."
 type: feedback
 originSessionId: fa79e2f6-c3ad-4437-b4a7-ff92f216988e
 ---

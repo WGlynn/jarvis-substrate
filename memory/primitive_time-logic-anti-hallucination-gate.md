@@ -1,6 +1,6 @@
 ---
 name: TimeLogicAntiHallucinationGate
-description: ∀ temporal claim (duration / since-when / "for X years" / "this week" / implied-history) ⇒ verify-then-assert ∨ flag-as-unverified. ✗ project current-state backward as always-true. ✗ conflate entity-T0 ≠ feature-T0 ≠ behavior-T0. Sister ⇐ AA#3 (entity-axis cross-ref) + [F·dont-default-concede-verify-first]. Caught 2026-06-09: ✗ "year of advice-mining" when cron-loop T0 = same-day; same session ✗ 2 fabricated GitHub handles. Class: confabulated-history.
+description: "∀ temporal claim (duration / since-when / \"for X years\" / \"this week\" / implied-history) ⇒ verify-then-assert ∨ flag-as-unverified. ✗ project current-state backward as always-true. ✗ conflate entity-T0 ≠ feature-T0 ≠ behavior-T0. Sister ⇐ AA#3 (entity-axis cross-ref) + [F·dont-default-concede-verify-first]. Caught 2026-06-09: ✗ \"year of advice-mining\" when cron-loop T0 = same-day; same session ✗ 2 fabricated GitHub handles. Class: confabulated-history."
 type: primitive
 originSessionId: fa79e2f6-c3ad-4437-b4a7-ff92f216988e
 ---

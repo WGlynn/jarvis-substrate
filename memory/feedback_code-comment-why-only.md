@@ -1,6 +1,6 @@
 ---
 name: CodeCommentWhyOnly
-description: ∀ code-comment ⇒ "why" only ¬ history ¬ changelog ¬ PR-numbers ¬ back-story. Inline narration belongs in commit-message ∨ PR-description ¬ source. ⇐ vdmkenny merge-review style-nit on PR #3363 2026-06-08: "Keeps the source easier to skim later." Applies to ∀ JARVIS code-generation, especially Rust crate scaffolds w/ TODO-narrating habit.
+description: "∀ code-comment ⇒ \"why\" only ¬ history ¬ changelog ¬ PR-numbers ¬ back-story. Inline narration belongs in commit-message ∨ PR-description ¬ source. ⇐ vdmkenny merge-review style-nit on PR #3363 2026-06-08: \"Keeps the source easier to skim later.\" Applies to ∀ JARVIS code-generation, especially Rust crate scaffolds w/ TODO-narrating habit."
 type: feedback
 originSessionId: fa79e2f6-c3ad-4437-b4a7-ff92f216988e
 ---
