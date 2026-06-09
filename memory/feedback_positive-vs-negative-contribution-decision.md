@@ -6,34 +6,57 @@ originSessionId: fa79e2f6-c3ad-4437-b4a7-ff92f216988e
 ---
 **[F·positive-vs-negative-contribution-decision]**
 
-## ⚙ Rule — 3-axis filter ∀ contribution-graph entry
+## ⚙ Rule — Physics > Constitution > Governance, NO discretion
 
-### Axis 1 — Substance floor
-∃ extractable structural-shape one-liner? ("X advice ⇒ Y change to substrate")
-- ✓ pass ⇒ proceed to Axis 2
-- ✗ fail ⇒ **negative** ⇒ null-player axiom guarantees 0 attribution mass
+Per [P·augmented-governance]: classification MUST be structural-by-construction, not policy-by-Will. If Will can flip a negative to positive (or vice versa) by taste, the contribution-graph invariants are not load-bearing enough.
 
-### Axis 2 — Substrate relevance
-Does the structural shape apply to JARVIS ∨ VibeSwap?
-- ✓ apply ⇒ pending-positive, proceed to Axis 3
-- ✗ generic-good-design ⇒ **class-c neutral** ⇒ `_advice-mined-log.md` only ⇒ ¬ graph-node
+### Physics layer (math-enforced, no override)
+Shapley 5-axiom set on the graph: null-player + symmetry + efficiency + additivity + pairwise-proportionality.
+- null-player ⇒ ✗ attribution-padding
+- symmetry ⇒ ✗ handle-bias
+- efficiency ⇒ total = sum of marginals
+- additivity ⇒ multi-advice composes
+- pairwise-proportionality ⇒ equal-weight-at-same-depth
 
-### Axis 3 — Will-triage outcome
-Pending-positive ⇒ Will reviews:
-- actioned ⇒ **positive** ⇒ edge weight = patch-impact
-- rejected (substance-wrong) ⇒ **negative** ⇒ logged w/ rejection-reason
-- defer/skip indefinitely ⇒ stays **pending-positive** (advice sound, ship-deferred)
+Will, JARVIS, no party can break these. They are by construction.
+
+### Constitution layer (2-axis mechanical predicate filter)
+Both axes are mechanical predicates evaluated by the C2.5 classifier, NOT judgment calls. Per Will 2026-06-09 15:11 ET ("you can decide physics and constitution rules"), the design of these predicates is the agent's responsibility; their application MUST be uniform across all contributions.
+
+**Axis 1 — Substance floor (mechanical predicate)**:
+- The contribution contains at least one substantive proposition about how a substrate (theirs, ours, or shared) should be structured, changed, preserved, or avoided.
+- Decision procedure: can the classifier extract a `(substrate, change-direction, predicate)` tuple from the contribution's text?
+- ✓ pass-shapes: "X is wrong because Y" / "Z should be replaced with W" / "Avoid pattern P because failure mode F" / "Pattern P enforces invariant I" / declarative principle with falsifiability
+- ✗ fail-shapes: expressive reaction with no proposition ("this is bad" / "your post is too long" / cross-link to a mocking discussion) / self-referential meta with no proposition / off-topic
+- ✗ axis-1-fail ⇒ **NEGATIVE** ⇒ null-player axiom mechanically zeros attribution. Constitutional, not discretionary.
+
+**Axis 2 — Substrate relevance (mechanical predicate)**:
+- The structural shape from axis 1 maps onto at least one component of JARVIS or VibeSwap with named identifiability.
+- Decision procedure: can the classifier name a specific JARVIS component (hook / primitive / cron / script / memory file) or VibeSwap component (contract / frontend module / oracle / docs) that the advice's predicate touches?
+- ✓ named-component ⇒ enters graph as **pending** with edge-weight 0
+- ✗ generic-good-design with no named-component ⇒ **CLASS-C NEUTRAL** ⇒ `_advice-mined-log.md` only ⇒ ¬ graph-node ⇒ ¬ negative (just out-of-scope)
+
+Pass both axes ⇒ contributor enters the graph as **pending** with edge-weight 0. Nobody (including Will) can demote them to negative without a constitutional re-classification (proving axis 1 or 2 actually fails on closer read).
+
+### Governance layer (Will's role, free within constitution)
+Will chooses what to ACTION (= ship a patch tracing back to this advice). Will does NOT decide positive vs negative.
+- pending → **actioned** when a patch lands ⇒ edge weight set by patch impact ⇒ contributor's attribution-mass updates by Shapley calc
+- pending → stays pending indefinitely if no patch ⇒ edge weight stays 0 ⇒ contributor has zero attribution-mass but is not negative
+- pending → **constitutional-reclassify-to-negative** ONLY if deeper reading proves axis 1 or 2 actually fails ⇒ reason logged
+- ✗ "Will doesn't like this contributor" is not a valid transition. Discretion at the classification layer is unconstitutional.
+
+The graph state determines positive vs negative. Will's role is action-allocation only.
 
 ## 🎯 Edge cases
 
-| Shape | Axis 1 | Axis 2 | Axis 3 | Classification |
+| Shape | Axis 1 | Axis 2 | Action-status | Classification |
 |---|---|---|---|---|
 | hostile-but-structurally-sharp | ✓ | ✓ | actioned | **positive** (mechanism rewards substance ¬ niceness) |
-| friendly-but-vague | ✗ | n/a | n/a | **negative** (mechanism rewards substance ¬ vibes) |
-| substance + generic-no-application | ✓ | ✗ | n/a | **class-c neutral** |
-| substance + applicable + Will-defers | ✓ | ✓ | pending | **pending-positive** (counted on action) |
-| drive-by snark + format-complaint | ✗ | n/a | n/a | **negative** |
-| Will-rejected for taste-reasons | ✓ | ✓ | rejected | **negative** + reason logged for audit |
+| friendly-but-vague | ✗ | n/a | n/a | **negative** (constitutional, not discretionary) |
+| substance + generic-no-application | ✓ | ✗ | n/a | **class-c neutral** (out-of-scope, not negative) |
+| substance + applicable + no-patch-yet | ✓ | ✓ | pending | **pending, attribution-mass 0** (waiting on action by anyone) |
+| drive-by snark / format-complaint | ✗ | n/a | n/a | **negative** (constitutional) |
+| Will personally dislikes contributor | ✓ | ✓ | pending | **pending** — discretion can't demote. If Will chooses not to action, contributor stays at 0 mass. Their work is still in the graph honestly. |
 
 ## 🎯 Worked examples (2026-06-09 ledger)
 
