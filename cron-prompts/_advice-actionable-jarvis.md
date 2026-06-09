@@ -56,6 +56,22 @@ Format same as `_advice-actionable-vibeswap.md`.
 - Suggested action: when implementing the RaresKeY 3-lane separation, also add a `status:` field to frontmatter (proposed / accepted / implemented / superseded) AND a heading-level emoji marker so a reader scrolling the `memory/` directory sees status at a glance. Compose with [F·advice-mining-must-publish-to-public-graph] — public primitives need readable status.
 - Will-triage: pending
 
+## [2026-06-09 17:48 ET] — Stabilize system prompt; sequence memory extraction outside the hot path
+
+- Source: PR #3360 by @NoodleLDS. https://github.com/pewdiepie-archdaemon/odysseus/pull/3360
+- Their advice (paraphrase): every chat message against a local OpenAI-compatible backend was forcing a full prompt re-evaluation (15-30s) because dynamic content was being folded into the system prompt on every turn, busting the KV cache. Fix at the payload-assembly boundary: stabilize the system prompt (no per-turn variance), sequence memory extraction so it does not block the user response, send stable.
+- Our substrate state: JARVIS injects sub-indexes via memory-preprocessor at SessionStart (stable for the session) but the situation-matched WARM-MAP loader can change content mid-session. Per-turn DEEP-RECALL also varies. The hot-path penalty for KV-cache invalidation matters at scale; right now we eat it because everything runs through Anthropic's hosted inference where KV-cache discipline is opaque to us. When JARVIS-as-published agent ships with local backends, this becomes load-bearing.
+- Suggested action: audit which hooks mutate the system-prompt portion vs which mutate user-turn content. Anything system-prompt-side should be stable-per-session. Move WARM-MAP injection to user-turn context if it must change mid-session. Compose with [F·full-auto-public-action-gate] for the publication-phase boundary.
+- Will-triage: pending (load-bearing for JARVIS-publication phase, lower priority for hosted-inference current use)
+
+## [2026-06-09 17:48 ET] — Fail-closed for null-user owner scope (auth-disabled vs auth-enabled-null distinction)
+
+- Source: PR #3613 by @RaresKeY. https://github.com/pewdiepie-archdaemon/odysseus/pull/3613
+- Their advice (paraphrase): in resource-owner filtering, distinguish auth-disabled single-user mode (where null-user is expected and means "show everything") from auth-enabled requests where current_user fails to resolve (where null-user is suspicious and should fail closed). Same owner policy across all related queries (list, sidebar, count, batch, stats) so the boundary is unified.
+- Our substrate state: JARVIS is currently single-user (Will), so the auth-enabled-null case doesn't fire. Becomes load-bearing when JARVIS-as-published-agent ships with multi-user support. The principle (fail-closed for unresolved-auth, unified owner policy across related queries) is timeless.
+- Suggested action: when scaffolding multi-user support, ship `AUTH_ENABLED` toggle that distinguishes the two cases explicitly. Default auth-enabled-null to 403 (or 404 to avoid enumeration). Audit all owner-filtering queries for shared policy enforcement. Compose with [F·will-empowers-agent-on-substrate-design] — the constitutional layer should encode "fail-closed on unresolved auth" as a mechanical predicate.
+- Will-triage: pending (deferred to JARVIS-publication phase)
+
 ## [2026-06-09 17:42 ET] — Stabilization-milestone intake lane (proposed-vs-accepted lifecycle)
 
 - Source: Discussion #3163 by @RaresKeY. https://github.com/pewdiepie-archdaemon/odysseus/discussions/3163

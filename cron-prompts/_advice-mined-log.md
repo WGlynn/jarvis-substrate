@@ -26,3 +26,15 @@ Format per row:
 | 2026-06-09 | Issue #3670 | @RaresEduard-Tudor | defensive-DOM-insertion bug (banner inserted-before non-existent element); class: null-check on DOM-anchor before insertBefore | c-neutral |
 | 2026-06-09 | Issue #2918 | @glenn2223 | AMD GPU acceleration via HIP (RDNA3+) and Vulkan (RDNA2); platform-specific build path | c-neutral |
 | 2026-06-09 | PR #3661 | @TimHoogervorst | UI feature: import from library directly into chat | c-neutral |
+| 2026-06-09 | PR #3540 | @NoodleLDS | JSON list truncation with sentinel marker (api_call payload size cap) | c-neutral |
+| 2026-06-09 | PR #3704 | @vdmkenny | main→dev backport discipline (AGPL relicense + Cookbook serve) | c-neutral |
+| 2026-06-09 | PR #3152 | @michaelxer | preserve reasoning_content during message sanitization (Moonshot/Kimi provider integration) | c-neutral |
+| 2026-06-09 | PR #3682 | @TimHoogervorst | merge duplicate calendar delete endpoints (fix for #3672 pattern) | c-neutral |
+| 2026-06-09 | PR #3693 | @TimHoogervorst | a11y aria-label + title attributes on dismiss button | c-neutral |
+| 2026-06-09 | PR #3685 | @alteixeira20 | pilot database stub helper for test isolation | c-neutral |
+| 2026-06-09 | PR #3690 | @OdWar420 | gzip-compress text HTTP responses; bandwidth perf | c-neutral |
+| 2026-06-09 | PR #3090 | @arnodecorte | API token scopes for cookbook (RBAC granularity pattern) | c-neutral |
+| 2026-06-09 | PR #3560 | @Rohithmatham12 | npx cache subprocess check with graceful fallback | c-neutral |
+| 2026-06-09 | PR #3664 | @vdmkenny | start ChromaDB in macOS launcher (platform service-init parity) | c-neutral |
+| 2026-06-09 | PR #3675 | @RaresEduard-Tudor | use _INTERNAL_BASE in serve-session route registration (config-driven routing) | c-neutral |
+| 2026-06-09 | PR #3656 | @DevSidd2006 | remove max_output_tokens from ChatGPT Subscription payload (provider-payload schema diff) | c-neutral |

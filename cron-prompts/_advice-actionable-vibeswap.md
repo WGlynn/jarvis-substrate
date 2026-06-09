@@ -48,6 +48,14 @@ Format:
 - Suggested action: catalog VibeSwap test/ files NOT under fuzz/security/integration/ and tag them with intended area in a per-test comment header. Audit which helpers in tests/helpers/ are reused vs orphan. Goal: every test file knows its area + every helper has at least 2 callers. Compose with [F·foundry-perf-rules] hardware caps already in place.
 - Will-triage: pending
 
+## [2026-06-09 17:50 ET] — Fast-lane + duration visibility implementation (companion to #3699)
+
+- Source: PR #3659 by @alteixeira20. https://github.com/pewdiepie-archdaemon/odysseus/pull/3659
+- Their advice (paraphrase): the implementation of the slow-test marking discipline from #3699/#2523. Adds `slow` pytest marker, `tests/run_focus.py --fast` (= `not slow`), `--durations N` forwarded, `--durations-min SECONDS` (only when `--durations` set), validation for negative values, rejection of duration-reporting-only invocations, runner tests. Notably: no tests marked slow IN this PR — slow classification deferred to a small evidence-backed PR later.
+- Our substrate state: Foundry has implicit duration-tier behavior via gas reports but no explicit slow-marker convention. The PR pattern (ship infrastructure first, then classify in evidence-backed PRs) is the right shape for VibeSwap test discipline. Compose with #3699 entry.
+- Suggested action: scaffold equivalent in Foundry — `forge test --gas-report --json` already exists; add a Will-runnable script `script/test-fast.sh` that filters tests by duration threshold from a previous gas-report JSON. No tests classified slow in the same PR — classification is a separate evidence-backed PR after a week of CI runs.
+- Will-triage: pending
+
 ## [2026-06-09 16:01 ET] — Mark slow tests from duration evidence (data-driven test categorization)
 
 - Source: Issue #3699 by @alteixeira20. https://github.com/pewdiepie-archdaemon/odysseus/issues/3699

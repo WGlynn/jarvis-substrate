@@ -56,3 +56,18 @@ The null-player axiom protects against attribution-padding. The symmetry axiom p
 | 2026-06-09 | @TimHoogervorst | PR #3661 | UI library-to-chat import | class-c neutral | n/a | `_advice-mined-log.md` |
 | 2026-06-09 | @RaresKeY | Discussion #3163 | Stabilization-milestone intake lane; maintainer-owned promotion; good-fit candidate list | jarvis | pending | queue: `_advice-actionable-jarvis.md` |
 | 2026-06-09 | @penguman420 | Discussion #3642 | source-to-fact mapping via inline citations; verification UI for receipts traceability | jarvis | pending | queue: `_advice-actionable-jarvis.md` |
+| 2026-06-09 | @NoodleLDS | PR #3360 | stabilize system prompt; sequence memory extraction outside hot path; KV-cache discipline | jarvis | pending | queue: `_advice-actionable-jarvis.md` |
+| 2026-06-09 | @RaresKeY | PR #3613 | fail-closed for null-user owner scope; auth-disabled vs auth-enabled-null distinction | jarvis | pending (deferred to JARVIS-publication phase) | queue: `_advice-actionable-jarvis.md` |
+| 2026-06-09 | @alteixeira20 | PR #3659 | fast-lane + duration visibility implementation pattern (infrastructure first, classification later) | vibeswap | pending | queue: `_advice-actionable-vibeswap.md` |
+| 2026-06-09 | @NoodleLDS | PR #3540 | JSON list truncation with sentinel marker | class-c neutral | n/a | `_advice-mined-log.md` |
+| 2026-06-09 | @vdmkenny | PR #3704 | main→dev backport discipline (AGPL relicense) | class-c neutral | n/a | `_advice-mined-log.md` |
+| 2026-06-09 | @michaelxer | PR #3152 | preserve reasoning_content in sanitized messages (provider-specific Moonshot/Kimi) | class-c neutral | n/a | `_advice-mined-log.md` |
+| 2026-06-09 | @TimHoogervorst | PR #3682 | merge duplicate calendar delete endpoints (companion fix to #3672) | class-c neutral | n/a | `_advice-mined-log.md` |
+| 2026-06-09 | @TimHoogervorst | PR #3693 | a11y: aria-label + title on dismiss button | class-c neutral | n/a | `_advice-mined-log.md` |
+| 2026-06-09 | @alteixeira20 | PR #3685 | pilot core database stub helper for tests | class-c neutral | n/a | `_advice-mined-log.md` |
+| 2026-06-09 | @OdWar420 | PR #3690 | gzip-compress text HTTP responses | class-c neutral | n/a | `_advice-mined-log.md` |
+| 2026-06-09 | @arnodecorte | PR #3090 | API token scopes for cookbook | class-c neutral | n/a | `_advice-mined-log.md` |
+| 2026-06-09 | @Rohithmatham12 | PR #3560 | npx cache subprocess check fallback | class-c neutral | n/a | `_advice-mined-log.md` |
+| 2026-06-09 | @vdmkenny | PR #3664 | start ChromaDB in start-macos.sh (platform-specific service init) | class-c neutral | n/a | `_advice-mined-log.md` |
+| 2026-06-09 | @RaresEduard-Tudor | PR #3675 | use _INTERNAL_BASE in serve-session endpoint registration | class-c neutral | n/a | `_advice-mined-log.md` |
+| 2026-06-09 | @DevSidd2006 | PR #3656 | remove max_output_tokens from ChatGPT Subscription payload | class-c neutral | n/a | `_advice-mined-log.md` |
