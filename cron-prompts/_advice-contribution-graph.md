@@ -46,3 +46,11 @@ The null-player axiom protects against attribution-padding. The symmetry axiom p
 | 2026-06-09 | @glenn2223 | Issue #2475 | unified cross-platform launcher CLI | class-c neutral | n/a | `_advice-mined-log.md` |
 | 2026-06-09 | @OdWar420 | PR #3697 | dep migration with graceful fallback (no-regress on existing installs) | class-c neutral | n/a | `_advice-mined-log.md` |
 | 2026-06-09 | @RosenTomov | PR #2104 | keyboard-driven command palette UI (ARIA combobox) | class-c neutral | n/a | `_advice-mined-log.md` |
+| 2026-06-09 | @hinode-codes | PR #3424 | UI dropdown state-management fix | class-c neutral | n/a | `_advice-mined-log.md` |
+| 2026-06-09 | @wwardaww | PR #3384 | skills file upload + rename CRUD | class-c neutral | n/a | `_advice-mined-log.md` |
+| 2026-06-09 | @kydno | PR #3549 | Kimi provider integration fix | class-c neutral | n/a | `_advice-mined-log.md` |
+| 2026-06-09 | @Cookiejunky | PR #3689 | NVIDIA CUDA Docker path for llama.cpp | class-c neutral | n/a | `_advice-mined-log.md` |
+| 2026-06-09 | @Cookiejunky | PR #3647 | Serve panel DI pattern fix | class-c neutral | n/a | `_advice-mined-log.md` |
+| 2026-06-09 | @RaresEduard-Tudor | Issue #3670 | defensive-DOM null-check pattern | class-c neutral | n/a | `_advice-mined-log.md` |
+| 2026-06-09 | @glenn2223 | Issue #2918 | AMD GPU acceleration (HIP + Vulkan) | class-c neutral | n/a | `_advice-mined-log.md` |
+| 2026-06-09 | @TimHoogervorst | PR #3661 | UI library-to-chat import | class-c neutral | n/a | `_advice-mined-log.md` |
