@@ -66,6 +66,8 @@ After COMMANDMENT 2 (whether dispatch happened or not):
 
 Runs every cron fire regardless of dispatch state. Burn-compute compounds into substrate quality per [J·subscription-cancelled-dont-stop].
 
+**Public-propagation requirement** (per [F·advice-mining-must-publish-to-public-graph]): every C2.5 write MUST be mirrored into `./cron-prompts/` and pushed to `WGlynn/jarvis-substrate` within the same cron tick. Scrub-list applies.
+
 ---
 
 ## ═══ COMMANDMENT 3 — PRIMITIVES ═══

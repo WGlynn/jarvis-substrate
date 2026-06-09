@@ -82,6 +82,8 @@ After COMMANDMENT 2 (whether dispatch happened or not):
 
 Burn-compute alignment: this commandment runs every cron fire regardless of dispatch state. Per [J·subscription-cancelled-dont-stop] + [F·burn-compute-toward-mission], cycles spent reading senior-dev advice compound into our substrate quality at zero marginal cost.
 
+**Public-propagation requirement** (per [F·advice-mining-must-publish-to-public-graph]): after any C2.5 write to `_advice-actionable-*` or `_advice-mined-log.md`, the corresponding files MUST be copied into `./cron-prompts/` and pushed to `WGlynn/jarvis-substrate` within the same cron tick. Local-only entries violate the announcement Discussion #3684 which stated the mechanism is inspectable live, not promised. Scrub-list applies (no partner names, no `nda-locked/`, no USD8 layers 6-8, no Anthropic engagement specifics).
+
 ---
 
 ## ═══ COMMANDMENT 3 — PRIMITIVES ═══
