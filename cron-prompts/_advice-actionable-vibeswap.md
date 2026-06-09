@@ -31,3 +31,11 @@ Format:
 - Our substrate state: VibeSwap CI status unknown from my context — known to use Foundry tests + Vercel deploy for the frontend. No explicit security-scanning baseline visible in CLAUDE.md. The repo has Solidity contracts + a Python oracle + React frontend, each with different scanner needs (slither for Solidity, bandit/pip-audit for Python, npm audit / Trivy for FE).
 - Suggested action: audit `vibeswap/.github/workflows/` to see what scanners exist; if absent, adopt the same advisory-first-then-blocking pattern. Specifically: slither (Solidity), bandit + pip-audit (Python oracle), npm audit + Trivy filesystem (FE).
 - Will-triage: pending
+
+## [2026-06-09 15:09 ET] — Pain-points-first audit before structural rewrites
+
+- Source: Issue #605 comment by @hinode-codes. https://github.com/pewdiepie-archdaemon/odysseus/issues/605
+- Their advice (paraphrase): pushing back on "rewrite everything in React" with a list of concrete pain points to solve FIRST: dev-server hot reload (currently full rebuild on every change), established project structure for separation of concerns + tooling discipline (pnpm, biome), routing. Principle: identify the actual operational pain before committing to a structural rewrite that might not address it.
+- Our substrate state: VibeSwap-FE is React + Vite + Tailwind. Vite already handles dev-server HMR, so hinode-codes' specific React-critique does not apply directly. BUT the meta-principle (audit current pain points before structural rewrite) IS relevant: VibeSwap has a backlog of refactor temptations (state-management consolidation, component library migration, design-token unification). Each should pass a "what concrete operational pain does this solve" test before going on the roadmap.
+- Suggested action: before any VibeSwap-FE structural change leaves the discussion phase, write a one-paragraph "current pain that triggered this" alongside the proposed change. If the pain is not articulable in plain terms, defer the change. Compose with [P·full-leverage-only-moves] — wait until a real pain is total, not partial.
+- Will-triage: pending

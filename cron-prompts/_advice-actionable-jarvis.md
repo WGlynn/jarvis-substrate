@@ -48,6 +48,14 @@ Format same as `_advice-actionable-vibeswap.md`.
 - Suggested action: distinguish "code/canonical change" from "prompt-behavior change" at the commit level. Latter type requires an explicit Will-approval gate, even under autonomous-mode posture (similar shape to [F·full-auto-public-action-gate] but applied at the substrate-prompt-surface level). Specifically: any MEMORY.md edit, any cron canonical edit that affects boot-injection, any hook that fires on SessionStart, gets queued for Will-approval rather than executed silently.
 - Will-triage: pending
 
+## [2026-06-09 15:08 ET] — Visual status indicator on primitive lifecycle states
+
+- Source: Issue #605 comment by @elpideus. https://github.com/pewdiepie-archdaemon/odysseus/issues/605
+- Their advice (paraphrase): "I wanted to contribute but I'm holding off until I know what's actually approved... A simple indicator (even plain emojis like ?/?/?) would make it much easier to know where to actually help." Translates to: lifecycle-state primitives need a visible status marker, not just a textual classification, so contributors can see at-a-glance what's accepted vs. proposed vs. archived.
+- Our substrate state: extends the RaresKeY 3-lane entry above. JARVIS primitives have an implicit lifecycle (proposed in `_primitives-pending.md`, accepted in `memory/`, archived if superseded) but no visual marker. The file-system separation does some of the work, but a `status:` field in frontmatter + an emoji marker in the heading would make scanning the public substrate much easier.
+- Suggested action: when implementing the RaresKeY 3-lane separation, also add a `status:` field to frontmatter (proposed / accepted / implemented / superseded) AND a heading-level emoji marker so a reader scrolling the `memory/` directory sees status at a glance. Compose with [F·advice-mining-must-publish-to-public-graph] — public primitives need readable status.
+- Will-triage: pending
+
 ## [2026-06-09 13:52 ET] — MCP Streamable HTTP + per-server auth headers
 
 - Source: PR #803 by @akapug "feat(mcp): Streamable HTTP transport + per-server auth headers" — https://github.com/pewdiepie-archdaemon/odysseus/pull/803 . Felix-active.

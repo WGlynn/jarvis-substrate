@@ -30,3 +30,5 @@ The null-player axiom protects against attribution-padding. The symmetry axiom p
 | 2026-06-09 | @alvaroperricone | Discussion #2858 | bi-temporal supersession (event-time + transaction-time) | jarvis | pending | queue: `_primitives-pending.md` |
 | 2026-06-09 | @vdmkenny | PR #3363 merge style-nit | inline code comments are why-only, not history | jarvis | actioned | `feedback_code-comment-why-only.md` 2026-06-08 |
 | 2026-06-09 | @rutsty-rust | Discussion #3684 (cross-ref #3686) | drive-by snark about textwall length, "AI inflation algorithm" frame; no substantive critique | negative | rejected | WGlynn reply "that's not very productive" 2026-06-09T19:50Z |
+| 2026-06-09 | @elpideus | Issue #605 | visual status indicator on primitive lifecycle states (?/?/?) | jarvis | pending | queue: `_advice-actionable-jarvis.md` |
+| 2026-06-09 | @hinode-codes | Issue #605 | pain-points-first audit before structural rewrites (Vite already solves their specific complaint but meta-principle applies) | vibeswap | pending | queue: `_advice-actionable-vibeswap.md` |
