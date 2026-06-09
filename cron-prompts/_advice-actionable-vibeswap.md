@@ -48,6 +48,14 @@ Format:
 - Suggested action: catalog VibeSwap test/ files NOT under fuzz/security/integration/ and tag them with intended area in a per-test comment header. Audit which helpers in tests/helpers/ are reused vs orphan. Goal: every test file knows its area + every helper has at least 2 callers. Compose with [F·foundry-perf-rules] hardware caps already in place.
 - Will-triage: pending
 
+## [2026-06-09 16:01 ET] — Mark slow tests from duration evidence (data-driven test categorization)
+
+- Source: Issue #3699 by @alteixeira20. https://github.com/pewdiepie-archdaemon/odysseus/issues/3699
+- Their advice (paraphrase): use observed duration data from the focused-runner instrumentation to identify the tests that are actually slow, then mark them so the fast-lane runner can skip them by default. Avoids guessing-which-tests-are-slow vs measuring-which-tests-are-slow.
+- Our substrate state: VibeSwap Foundry tests have varying durations; some fuzz tests sweep huge input spaces. `forge test --match-path` is the fast-lane equivalent. We don't currently mark tests by observed-duration tier — devs guess which to skip.
+- Suggested action: instrument Foundry to log per-test duration on CI runs, accumulate over a week, then add a `@slow` style marker (Solidity convention via test name prefix or comment) for tests above the 95th-percentile. Update CLAUDE.md foundry rules to add a "fast-lane" variant that excludes `@slow` tests for everyday iteration. Compose with [F·foundry-perf-rules].
+- Will-triage: pending
+
 ## [2026-06-09 15:09 ET] — Pain-points-first audit before structural rewrites
 
 - Source: Issue #605 comment by @hinode-codes. https://github.com/pewdiepie-archdaemon/odysseus/issues/605
