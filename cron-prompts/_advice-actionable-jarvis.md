@@ -56,6 +56,30 @@ Format same as `_advice-actionable-vibeswap.md`.
 - Suggested action: when implementing the RaresKeY 3-lane separation, also add a `status:` field to frontmatter (proposed / accepted / implemented / superseded) AND a heading-level emoji marker so a reader scrolling the `memory/` directory sees status at a glance. Compose with [F·advice-mining-must-publish-to-public-graph] — public primitives need readable status.
 - Will-triage: pending
 
+## [2026-06-09 15:55 ET] — Merge/review policy as stabilization priority
+
+- Source: Issue #3694 by @RaresKeY. https://github.com/pewdiepie-archdaemon/odysseus/issues/3694
+- Their advice (paraphrase): define explicit review/merge policy v1 BEFORE PR volume scales further. Differentiate trivial (docs/typo) vs sensitive (auth, data-loss, CI, tool execution) — sensitive PRs require independent review + cooling-off window. Latest-commit-changes-after-approval invalidates approval.
+- Our substrate state: JARVIS-side, I merge memory primitives autonomously during throughput-spikes. Per [F·primitive-capture-vs-execution-throughput] the drift is real; same shape as Felix's "rapid approve-to-merge" problem. We don't have a "this primitive change is sensitive" tier.
+- Suggested action: classify primitive edits by sensitivity tier — trivial (typo, scope refinement) vs sensitive (axiom changes, classifier predicate rewrites, hook-firing changes). Sensitive edits require either Will-explicit-approval OR a 24h cool-off where the primitive lands as `status: proposed` then auto-promotes if no Will-objection. Compose with [F·will-empowers-agent-on-substrate-design] — agent can ship trivial, governance gate fires for sensitive.
+- Will-triage: pending
+
+## [2026-06-09 15:55 ET] — Workspace-confine agent file/shell tools via context-local binding
+
+- Source: PR #3665 by @vdmkenny. https://github.com/pewdiepie-archdaemon/odysseus/pull/3665
+- Their advice (paraphrase): scope agent file/shell tools to a selectable workspace folder via a context-local binding enforced at the shared path-resolver layer. New tools using the same resolver inherit confinement automatically — cannot bypass it.
+- Our substrate state: JARVIS-driven Claude Code sessions have full file-system access via Read/Edit/Write/Bash. There's an environment-defined working-directory but no enforced confinement; an autonomous loop could theoretically write outside scope.
+- Suggested action: add a JARVIS hook PreToolUse on Read/Write/Edit/Bash that validates the target path against an allowlist derived from the active project root + ~/.claude/. Reject (or surface scrub-warning) if a write targets a path outside allowlist. This is sandboxing-via-hook, same shape as vdmkenny's context-local binding.
+- Will-triage: pending
+
+## [2026-06-09 15:55 ET] — Container sandbox for agent shell tools (defense-in-depth)
+
+- Source: PR #3695 by @ruanbluiz. https://github.com/pewdiepie-archdaemon/odysseus/pull/3695
+- Their advice (paraphrase): opt-in, default-off ephemeral container per agent bash/python tool call. Prevents prompt-injection from reaching process env (creds/keys) or internal/metadata endpoints. Strictly additional confinement on top of existing admin gate.
+- Our substrate state: JARVIS Bash invocations run in the parent shell with full env access — email addresses, deployment service credentials, GitHub PAT, and other secrets are reachable via `env`. A prompt-injected agent could exfiltrate.
+- Suggested action: scope this against [F·burn-compute-toward-mission] threat model. For single-user-zero-stakes-phase (per [P·pre-decentralization-optimization-sequencing]), in-process is fine. But: surface this as a candidate for when JARVIS-as-published-agent ships (per [J·odysseus-mission-loop] Step 2) — published contributors should get sandboxing by default.
+- Will-triage: pending (deferred to JARVIS-publication phase)
+
 ## [2026-06-09 15:31 ET] — Write-side embedding similarity as fallback to entity-registry regex
 
 - Source: agent-self-surfaced during the @Amir0234-afk reply draft on #2858. The honest framing forced the gap into the open: write-side currently uses regex against a maintained registry, write-side embedding similarity is not implemented. Per [F·positive-vs-negative-contribution-decision] axis 2: self-surfaced advice still goes in the queue if substrate-relevant.

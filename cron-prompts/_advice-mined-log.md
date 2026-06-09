@@ -11,3 +11,5 @@ Format per row:
 
 | date | thread | author | shape | class |
 |---|---|---|---|---|
+| 2026-06-09 | PR #3683 | @max-freddyfire | multi-lingual intent regex coverage extension (Swedish/Norwegian/Danish/German/Spanish/French) | c-neutral |
+| 2026-06-09 | Issue #3672 | @RaresEduard-Tudor | duplicate route handler is dead code (FastAPI matches first registration); class: dead-code/route-collision detection | c-neutral |

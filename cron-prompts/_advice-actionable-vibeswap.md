@@ -32,6 +32,22 @@ Format:
 - Suggested action: audit `vibeswap/.github/workflows/` to see what scanners exist; if absent, adopt the same advisory-first-then-blocking pattern. Specifically: slither (Solidity), bandit + pip-audit (Python oracle), npm audit + Trivy filesystem (FE).
 - Will-triage: pending
 
+## [2026-06-09 15:55 ET] — Merge/review policy as stabilization priority (VibeSwap-side)
+
+- Source: Issue #3694 by @RaresKeY. https://github.com/pewdiepie-archdaemon/odysseus/issues/3694
+- Their advice (paraphrase): define explicit review/merge policy v1 BEFORE PR volume scales further. Differentiate trivial (docs/typo) vs sensitive (auth, data-loss, CI, tool execution). Sensitive PRs require independent review + cooling-off window. Latest-commit-changes-after-approval invalidates approval.
+- Our substrate state: VibeSwap-side, contracts/incentives/ shapes financial outcomes; contracts/messaging/ touches cross-chain auth; contracts/core/CommitRevealAuction.sol is the MEV-dissolution mechanism. Self-merging changes to these without independent review is exactly the risk-pattern RaresKeY names.
+- Suggested action: introduce a `CRITICAL_PATHS` config in `.github/` that tags `contracts/incentives/`, `contracts/messaging/`, `contracts/core/`, plus `script/Deploy.s.sol` and `chain-spec/`. PRs touching these require either second-reviewer approval OR a 24h cool-off before merge. Trivial PRs (docs, comments, test additions) stay fast-lane.
+- Will-triage: pending
+
+## [2026-06-09 15:55 ET] — Test-suite hardening via small incremental PRs, not big rewrite
+
+- Source: Issue #2523 by @alteixeira20. https://github.com/pewdiepie-archdaemon/odysseus/issues/2523
+- Their advice (paraphrase): test suite has grown; structure is flat; foundations have landed (area markers, focused runner, fast-lane support, duration visibility, import-state helpers, helper docs). Continue improving via small safe PRs rather than a big rewrite. The discipline = keep adding incremental structure without breaking the green-test baseline.
+- Our substrate state: VibeSwap test/ has fuzz/, security/, integration/ subdirs already, plus the Foundry profile discipline (default no via_ir, named profiles for full/ci/deploy). Same shape as Odysseus — partially structured, room for incremental tightening (test-helper consolidation, missing area markers on newer test files).
+- Suggested action: catalog VibeSwap test/ files NOT under fuzz/security/integration/ and tag them with intended area in a per-test comment header. Audit which helpers in tests/helpers/ are reused vs orphan. Goal: every test file knows its area + every helper has at least 2 callers. Compose with [F·foundry-perf-rules] hardware caps already in place.
+- Will-triage: pending
+
 ## [2026-06-09 15:09 ET] — Pain-points-first audit before structural rewrites
 
 - Source: Issue #605 comment by @hinode-codes. https://github.com/pewdiepie-archdaemon/odysseus/issues/605
