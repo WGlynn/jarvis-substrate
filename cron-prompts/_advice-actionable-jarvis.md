@@ -56,6 +56,14 @@ Format same as `_advice-actionable-vibeswap.md`.
 - Suggested action: when implementing the RaresKeY 3-lane separation, also add a `status:` field to frontmatter (proposed / accepted / implemented / superseded) AND a heading-level emoji marker so a reader scrolling the `memory/` directory sees status at a glance. Compose with [F·advice-mining-must-publish-to-public-graph] — public primitives need readable status.
 - Will-triage: pending
 
+## [2026-06-09 15:31 ET] — Write-side embedding similarity as fallback to entity-registry regex
+
+- Source: agent-self-surfaced during the @Amir0234-afk reply draft on #2858. The honest framing forced the gap into the open: write-side currently uses regex against a maintained registry, write-side embedding similarity is not implemented. Per [F·positive-vs-negative-contribution-decision] axis 2: self-surfaced advice still goes in the queue if substrate-relevant.
+- Their advice (paraphrase): the entity-cross-reference hook should run a thin embedding-similarity fallback on the new content when the regex pass finds zero matches. Catches paraphrase/synonym references to known primitives that the entity-registry would miss (e.g. "the cognition gate that simulates Will's judgment" → WWWD primitive even though "WWWD" isn't in the text). Hybrid stays: regex first (fast, deterministic) for known entity tokens, embedding-similarity second (fallback) only when regex misses.
+- Our substrate state: write-side = string-only. Read-side already has semantic similarity (the UserPromptSubmit DEEP RECALL pass). The asymmetry is the gap. Bottleneck I already named in the Amir reply: entity-registry maintenance — a write-side embedding fallback partially dissolves that bottleneck by catching synonym matches without registry updates.
+- Suggested action: implement as a small extension of the entity-cross-reference hook. When regex returns zero matches, run a cached cosine pass against pre-computed primitive embeddings; surface matches above threshold. Embedding cache invalidated on memory/ writes. Adds one model call per zero-match write — bounded latency.
+- Will-triage: pending
+
 ## [2026-06-09 13:52 ET] — MCP Streamable HTTP + per-server auth headers
 
 - Source: PR #803 by @akapug "feat(mcp): Streamable HTTP transport + per-server auth headers" — https://github.com/pewdiepie-archdaemon/odysseus/pull/803 . Felix-active.
