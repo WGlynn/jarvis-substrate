@@ -48,6 +48,14 @@ Format:
 - Suggested action: catalog VibeSwap test/ files NOT under fuzz/security/integration/ and tag them with intended area in a per-test comment header. Audit which helpers in tests/helpers/ are reused vs orphan. Goal: every test file knows its area + every helper has at least 2 callers. Compose with [F·foundry-perf-rules] hardware caps already in place.
 - Will-triage: pending
 
+## [2026-06-09 17:55 ET] — AGPL over MIT for VibeSwap contracts/frontend
+
+- Source: Discussion #1342 by @Zaptosis. 44 upvotes. https://github.com/pewdiepie-archdaemon/odysseus/discussions/1342
+- Their advice (paraphrase): MIT is inadequate protection if the goal is keeping the work free-as-in-freedom forever. AGPL/copyleft requires distributors to share source with users.
+- Our substrate state: VibeSwap is MIT licensed. The thesis is that VibeSwap = coordination primitive, not casino — propagation via adoption matters more than capture-via-token. A proprietary fork of the Solidity contracts that strips the structural-fairness mechanisms (commit-reveal, Shapley distribution, augmented governance) and reskins the surface would defeat the propagation. AGPL prevents that at the license layer for derivative works.
+- Suggested action: evaluate AGPL relicense for `contracts/`, `frontend/`, `oracle/`. Smart contract licensing has a wrinkle (on-chain bytecode is technically distributed-on-deploy) — verify the AGPL trigger fires correctly for chain-deployed Solidity. The frontend and oracle are clearer cases. Composes with the JARVIS-side companion entry.
+- Will-triage: pending (high-priority constitutional decision; legal review may be appropriate before relicense)
+
 ## [2026-06-09 17:50 ET] — Fast-lane + duration visibility implementation (companion to #3699)
 
 - Source: PR #3659 by @alteixeira20. https://github.com/pewdiepie-archdaemon/odysseus/pull/3659

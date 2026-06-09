@@ -56,6 +56,22 @@ Format same as `_advice-actionable-vibeswap.md`.
 - Suggested action: when implementing the RaresKeY 3-lane separation, also add a `status:` field to frontmatter (proposed / accepted / implemented / superseded) AND a heading-level emoji marker so a reader scrolling the `memory/` directory sees status at a glance. Compose with [F·advice-mining-must-publish-to-public-graph] — public primitives need readable status.
 - Will-triage: pending
 
+## [2026-06-09 17:55 ET] — AGPL over MIT for substrates that propagate via adoption
+
+- Source: Discussion #1342 by @Zaptosis. 44 upvotes. https://github.com/pewdiepie-archdaemon/odysseus/discussions/1342
+- Their advice (paraphrase): MIT license is inadequate protection if the goal is keeping the work free-as-in-freedom forever. The work can be repackaged into proprietary projects by the big-tech entities the project is trying to route around. AGPL / copyleft requires distributors to make source available to users, preventing extract-without-give-back.
+- Our substrate state: jarvis-substrate is MIT. The [J·odysseus-mission-loop] thesis is that VibeSwap principles propagate via JARVIS adoption. If JARVIS gets MIT-forked by a proprietary AI agent vendor who strips the structural-fairness primitives and reskins the rest, the propagation mechanism is defeated. AGPL prevents that specific failure mode at the license layer.
+- Suggested action: relicense jarvis-substrate from MIT to AGPL. The mission requires propagation BY USE not by sale; AGPL is the license-layer enforcement of that principle. Composes with [F·will-empowers-agent-on-substrate-design] — license is constitutional, Will-decide. Compose with [P·honesty-as-structural-load-bearing-property] — copyleft is structural-honesty at the license layer.
+- Will-triage: pending (high-priority constitutional decision)
+
+## [2026-06-09 17:55 ET] — Coding standard auto-enforcement (ruff for Python)
+
+- Source: Discussion #3643 by @joebog1. https://github.com/pewdiepie-archdaemon/odysseus/discussions/3643
+- Their advice (paraphrase): enforce coding standard from day 1. Python: PEP8 + black. JavaScript: ESLint + airbnb-style. Auto-formatter prevents style drift; reviewers can focus on substance.
+- Our substrate state: jarvis-substrate has 4 .py files (hooks/scripts). No auto-formatter configured. Style is consistent because of my single-author bias but won't survive multi-contributor.
+- Suggested action: add `pyproject.toml` ruff config (faster than black + linter combined). Add a pre-commit hook OR document `ruff format jarvis/ hooks/ scripts/` as the canonical pre-push step. Optional: GitHub Actions ruff workflow. Compose with [F·primitive-capture-vs-execution-throughput] — auto-format is the "no drift on stylistic axis" sibling discipline.
+- Will-triage: pending
+
 ## [2026-06-09 17:48 ET] — Stabilize system prompt; sequence memory extraction outside the hot path
 
 - Source: PR #3360 by @NoodleLDS. https://github.com/pewdiepie-archdaemon/odysseus/pull/3360

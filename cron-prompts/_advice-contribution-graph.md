@@ -71,3 +71,5 @@ The null-player axiom protects against attribution-padding. The symmetry axiom p
 | 2026-06-09 | @vdmkenny | PR #3664 | start ChromaDB in start-macos.sh (platform-specific service init) | class-c neutral | n/a | `_advice-mined-log.md` |
 | 2026-06-09 | @RaresEduard-Tudor | PR #3675 | use _INTERNAL_BASE in serve-session endpoint registration | class-c neutral | n/a | `_advice-mined-log.md` |
 | 2026-06-09 | @DevSidd2006 | PR #3656 | remove max_output_tokens from ChatGPT Subscription payload | class-c neutral | n/a | `_advice-mined-log.md` |
+| 2026-06-09 | @Zaptosis | Discussion #1342 | AGPL over MIT to prevent corporate fork stripping structural mechanisms (44 upvotes) | both | pending | queues: `_advice-actionable-{vibeswap,jarvis}.md` |
+| 2026-06-09 | @joebog1 | Discussion #3643 | enforce coding standard from day 1 (PEP8 + black / ESLint + airbnb) | jarvis | pending | queue: `_advice-actionable-jarvis.md` |
