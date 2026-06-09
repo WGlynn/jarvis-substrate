@@ -32,6 +32,22 @@ Format same as `_advice-actionable-vibeswap.md`.
 - Suggested action: audit which JARVIS hooks/cron-prompts mutate shared files and whether concurrent fires can race. Specifically: `_primitives-pending.md`, `MEMORY.md` edits, `odysseus-discussion-campaign-log.md` (multiple loops append). Consider an append-only-with-tx pattern (write to a tmp + rename) for shared logs. Compose with [P·crash-resilient-memory-writes].
 - Will-triage: pending
 
+## [2026-06-09 14:48 ET] — Retrieval-boost-factor (no always-inject) — pivot in PR #720 review
+
+- Source: PR #720 review thread, @dustinm16 + @pewdiepie-archdaemon. dustinm16's commit-pivot after Felix's review: https://github.com/pewdiepie-archdaemon/odysseus/pull/720
+- Their advice (paraphrase): Felix flagged the always-inject "hot" memory tier as product-behavior-changing and held the PR for manual testing. dustinm16's response: "Hot-tier always-inject behavior — rethinking this. The current design overrides relevance-based filtering which is the wrong tradeoff. Planning to move importance to a retrieval boost factor only (stronger weight in the hybrid score) rather than a context injection guarantee. Users retain full control through the existing memory system."
+- Our substrate state: JARVIS does always-inject (MEMORY.md PRE-FLIGHT set is loaded at every SessionStart, no relevance gate at all). The exact pattern dustinm16 just pivoted AWAY from. Our defense is that PRE-FLIGHT entries are the genuinely-fail-closed minority — but inspection of the actual PRE-FLIGHT list shows accretion has happened.
+- Suggested action: re-audit MEMORY.md PRE-FLIGHT and demote anything that isn't truly fail-closed to a retrieval-boost-weighted entry that lives in a sub-index. The hybrid scoring formula from #720 (`0.50*vs + 0.35*kw + 0.05*recency + 0.10*importance`) is a serviceable starting weighting. Compose with the bi-temporal supersession candidate from #2858 to make the importance-decay axis honest.
+- Will-triage: pending
+
+## [2026-06-09 14:48 ET] — Prompt-behavior changes require explicit product gate
+
+- Source: PR #720 review by @pewdiepie-archdaemon. Felix's principle, applied to dustinm16's PR.
+- Their advice (paraphrase): "I would also want explicit product confirmation before always injecting 'hot' memories: even capped at 5, that changes prompt behavior." Translated principle: any change to the agent's prompt-behavior surface (what gets injected, when, at what weight) MUST pass an explicit product/owner gate, separate from code review. Code review checks correctness; product gate checks whether the behavior change is desired at all.
+- Our substrate state: JARVIS has no explicit "prompt-behavior change" gate. Edits to MEMORY.md, the memory-preprocessor sub-index expansion, or any cron canonical that injects boot-context all silently change Claude's prompt at next session. Some of these changes are Will-approved; many are agent-side autonomous.
+- Suggested action: distinguish "code/canonical change" from "prompt-behavior change" at the commit level. Latter type requires an explicit Will-approval gate, even under autonomous-mode posture (similar shape to [F·full-auto-public-action-gate] but applied at the substrate-prompt-surface level). Specifically: any MEMORY.md edit, any cron canonical edit that affects boot-injection, any hook that fires on SessionStart, gets queued for Will-approval rather than executed silently.
+- Will-triage: pending
+
 ## [2026-06-09 13:52 ET] — MCP Streamable HTTP + per-server auth headers
 
 - Source: PR #803 by @akapug "feat(mcp): Streamable HTTP transport + per-server auth headers" — https://github.com/pewdiepie-archdaemon/odysseus/pull/803 . Felix-active.
