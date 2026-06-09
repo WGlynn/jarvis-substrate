@@ -38,3 +38,13 @@ Format per row:
 | 2026-06-09 | PR #3664 | @vdmkenny | start ChromaDB in macOS launcher (platform service-init parity) | c-neutral |
 | 2026-06-09 | PR #3675 | @RaresEduard-Tudor | use _INTERNAL_BASE in serve-session route registration (config-driven routing) | c-neutral |
 | 2026-06-09 | PR #3656 | @DevSidd2006 | remove max_output_tokens from ChatGPT Subscription payload (provider-payload schema diff) | c-neutral |
+| 2026-06-09 | Discussion #3255 | @alex843726351-web | hardware-failure incident report (RTX 4080 SUPER popping during Qwen inference); not an architectural improvement proposal | c-neutral |
+| 2026-06-09 | Discussion #3720 | various | "maybe change the name?" — naming bikeshed, no architectural shape | c-neutral |
+| 2026-06-09 | Discussion #3691 | various | Docker Desktop on Windows install guide (show & tell) | c-neutral |
+| 2026-06-09 | Discussion #3609 | various | Electron desktop wrapper (show & tell) | c-neutral |
+| 2026-06-09 | Discussion #3627 | various | Lotse one-command setup for beginners | c-neutral |
+| 2026-06-09 | Discussion #1708 | various | bookmarks/highlights/research-queue idea | c-neutral |
+| 2026-06-09 | Discussion #789 | various | enabling GPU support — Q&A, not advice | c-neutral |
+| 2026-06-09 | Discussion #3651 | various | cloudflare tunnels Q&A | c-neutral |
+| 2026-06-09 | Discussion #3655 | various | cookbook downloads stuck — Q&A | c-neutral |
+| 2026-06-09 | Discussion #3554 | various | STT/TTS local setup Q&A | c-neutral |
