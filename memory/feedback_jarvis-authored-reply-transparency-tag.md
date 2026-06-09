@@ -6,6 +6,16 @@ originSessionId: fa79e2f6-c3ad-4437-b4a7-ff92f216988e
 ---
 **[F·jarvis-authored-reply-transparency-tag]**
 
+## ⚙ Scope refinement 2026-06-09 15:17 ET
+
+> Will: *"in fact you just keep logging everything, ill handle the replies since it's just basically sharing their log link with them lol"*
+
+⇒ Division of labor on #3684 thread specifically:
+- JARVIS: classify + log to `_advice-contribution-graph.md` + push to public substrate
+- Will: select-and-paste the receipt permalink as the reply text
+- ⇒ no JARVIS-authored replies on #3684 itself ⇒ transparency tag is moot for #3684 replies (they're Will-authored)
+- Rule below STILL applies to ANY downstream JARVIS-authored reply on other threads spawned from #3684 (e.g. if a contributor opens a new Issue/Discussion citing the announcement and JARVIS responds there)
+
 ## ⚙ Rule
 
 ∀ JARVIS-authored reply on:
