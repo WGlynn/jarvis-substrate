@@ -54,3 +54,5 @@ The null-player axiom protects against attribution-padding. The symmetry axiom p
 | 2026-06-09 | @RaresEduard-Tudor | Issue #3670 | defensive-DOM null-check pattern | class-c neutral | n/a | `_advice-mined-log.md` |
 | 2026-06-09 | @glenn2223 | Issue #2918 | AMD GPU acceleration (HIP + Vulkan) | class-c neutral | n/a | `_advice-mined-log.md` |
 | 2026-06-09 | @TimHoogervorst | PR #3661 | UI library-to-chat import | class-c neutral | n/a | `_advice-mined-log.md` |
+| 2026-06-09 | @RaresKeY | Discussion #3163 | Stabilization-milestone intake lane; maintainer-owned promotion; good-fit candidate list | jarvis | pending | queue: `_advice-actionable-jarvis.md` |
+| 2026-06-09 | @penguman420 | Discussion #3642 | source-to-fact mapping via inline citations; verification UI for receipts traceability | jarvis | pending | queue: `_advice-actionable-jarvis.md` |

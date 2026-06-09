@@ -56,6 +56,22 @@ Format same as `_advice-actionable-vibeswap.md`.
 - Suggested action: when implementing the RaresKeY 3-lane separation, also add a `status:` field to frontmatter (proposed / accepted / implemented / superseded) AND a heading-level emoji marker so a reader scrolling the `memory/` directory sees status at a glance. Compose with [F·advice-mining-must-publish-to-public-graph] — public primitives need readable status.
 - Will-triage: pending
 
+## [2026-06-09 17:42 ET] — Stabilization-milestone intake lane (proposed-vs-accepted lifecycle)
+
+- Source: Discussion #3163 by @RaresKeY. https://github.com/pewdiepie-archdaemon/odysseus/discussions/3163
+- Their advice (paraphrase): maintainer-owned `Stabilization v1` milestone with contributor intake lane. Good-fit candidates: security/auth/trust-boundary fixes, CI/tests/packaging/startup-runtime reliability, review/process templates that reduce maintainer load, small cleanup/restructuring PRs with clear validation, specs/implementation-truth docs, duplicate/overlap cleanup, platform stabilization, bugs that unblock many users. Bad fit: broad new features, large rewrites.
+- Our substrate state: JARVIS primitives blend lifecycle states (proposed, accepted, implemented, superseded) with no explicit milestone discipline. Composes directly with the @RaresKeY 3-lane separation entry from #605 earlier today — that one named the structure (issues/ADR/specs), this one names the GOVERNANCE process (intake lane + maintainer-owned milestone). Together they form a stabilization framework JARVIS could adopt.
+- Suggested action: introduce a `_stabilization-candidates.md` queue alongside `_primitives-pending.md`. Contributor (or agent-self) proposes primitives for stability; Will-as-maintainer promotes to `status: accepted` or rejects. Same intake-lane shape as RaresKeY's Stabilization v1. Compose with [F·will-empowers-agent-on-substrate-design] — agent proposes, Will-governance allocates milestone admission.
+- Will-triage: pending
+
+## [2026-06-09 17:42 ET] — Source-to-fact mapping for receipts traceability
+
+- Source: Discussion #3642 by @penguman420. https://github.com/pewdiepie-archdaemon/odysseus/discussions/3642
+- Their advice (paraphrase): verification bottleneck when sources are listed in bulk at the end of a report instead of mapped to specific claims. Solution: inline citations (each fact has a unique identifier or superscript linked to source), explicit (Fact A → Source B page X paragraph Y) data structure, hover/click verification UI.
+- Our substrate state: JARVIS primitives have a `## 📦 Receipts` section listing sources, but the claim-to-receipt mapping inside the body is implicit. A reader can't easily verify "this specific claim in the body traces to this specific receipt." Same verification-bottleneck shape penguman420 names.
+- Suggested action: introduce inline-receipt markers in primitive bodies — e.g., `[^r1]` superscript at the end of a claim, with receipts numbered in the receipts section. Or: tighter — quote-anchor every load-bearing claim to the specific Will-frame timestamp + permalink. Compose with [P·time-logic-anti-hallucination-gate] — verify-then-assert at write time, then make the verification AUDITABLE at read time.
+- Will-triage: pending
+
 ## [2026-06-09 15:55 ET] — Merge/review policy as stabilization priority
 
 - Source: Issue #3694 by @RaresKeY. https://github.com/pewdiepie-archdaemon/odysseus/issues/3694
