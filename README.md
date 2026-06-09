@@ -1,6 +1,8 @@
-# jarvis-os (public substrate)
+# jarvis-substrate (mirrored into [WGlynn/JARVIS](https://github.com/WGlynn/JARVIS))
 
-This is a public slice of the JARVIS agent stack referenced in [pewdiepie-archdaemon/odysseus#NNNN](https://github.com/pewdiepie-archdaemon/odysseus/discussions) (the announcement Discussion that points here).
+> **Canonical location moved.** This repo has been merged into [`WGlynn/JARVIS/substrate/`](https://github.com/WGlynn/JARVIS/tree/main/substrate) for coherence with the rest of the JARVIS architecture. This repo stays up so existing links (including the [Odysseus announcement Discussion](https://github.com/pewdiepie-archdaemon/odysseus/discussions/3684)) keep working, but new development happens in the unified monorepo. Same MIT license, same content, same compose-with graph.
+
+This is a public slice of the JARVIS agent stack referenced in the [announcement Discussion](https://github.com/pewdiepie-archdaemon/odysseus/discussions/3684) on the pewdiepie-archdaemon/odysseus repo.
 
 JARVIS is a personal coding-agent built on top of Claude. It has been running against the author's own workflow for about a year. This repo is the substrate the agent uses, not the agent itself: cron prompts, memory primitives, hooks, the advice-mining queues.
 
