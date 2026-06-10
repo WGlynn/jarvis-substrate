@@ -49,3 +49,11 @@ Public mirror — partner-specific references scrubbed per the loop's scrub-list
 - Our substrate state: frontend on React 18 + Vite 5 + framer-motion; deployed on Vercel; no CI on frontend
 - Suggested action: low-priority upgrade spike branch (motion rename first — mechanical; Vite 5→8 + Tailwind v4 together — needs the ship-web checklist after)
 - Will-triage: pending
+## [2026-06-10 17:55 ET] — Will-fed absorb: "Designing loops with Fable 5" + loop-engineering taxonomy threads
+- Source: 3 threads Will-pasted (Anthropic-staff Fable-5 loops thread; "beautiful broken refactor" meme; "Loops: What Every AI Engineer Needs to Know in 2026")
+- Technique: verifier-subagent in independent context > same-context self-critique; memory progression fail→investigate→verify→distill→consult; closed-loop default w/ 5-part checklist (goal/context/action/feedback/stop-condition); structural-bets only WITH verification loop
+- Port class: absorbed → memory primitive `feedback_design-loops-not-prompts.md` (shipped). Two follow-on actions remain:
+  1. /critical-qa upgrade: route grading through a verifier subagent (independent context) instead of same-context hostile Q&A
+  2. Loop-audit: run the 5-part checklist over all active loops (odysseus, skill-mining, autonomous-continue, WORK chain) — verify each has explicit goal + feedback + stop-condition
+- Our substrate state: RSAW already does maker≠checker; "surfaced xN, unactioned" anticipation telemetry = measurable consult-step failure
+- Will-triage: pending
