@@ -70,3 +70,11 @@ Public mirror — partner-specific references scrubbed per the loop's scrub-list
 - Our substrate state: dense-only recall; primitives-not-skills extraction; TG bot single-platform; model = Claude-weights (sovereignty partial)
 - Suggested action: (1) zero-risk spike: FTS5 index over session jsonl transcripts on a scratch DB, measure recall delta vs deep-recall.py alone; (2) read their skills+memory modules before any deeper port
 - Will-triage: pending
+
+## [2026-06-10 18:40 ET] — ADOPTED: two frontend skills installed (Will-directed "add this")
+- Source: https://github.com/Trystan-SA/claude-design-system-prompt (MIT) + https://github.com/zarazhangrui/frontend-slides (MIT) — both fetch-verified READMEs, shallow-cloned
+- Technique: (1) design-system = 20-chapter design doctrine + 14 phase-skills (production/system/review), 8 quality dimensions incl. anti-AI-trope aesthetics + WCAG + token-thinking; (2) frontend-slides = HTML presentation skill w/ progressive-disclosure file loading (map-first SKILL.md), 34 templates + 12 presets, PPT conversion
+- Port class: DIRECT-PORT (installed live): ~/.claude/skills/design-system/ (wrapper SKILL.md authored — precedence rule: vibeswap LOCKED aesthetic overrides) + ~/.claude/skills/frontend-slides/ (native skill, registered)
+- Our substrate state: vibeswap locked aesthetic existed; no general design-discipline skill, no deck-generation skill (decks were hand-built; /ship-web covers verification only)
+- Note: frontend-slides' progressive-disclosure structure (map first, reveal per-phase) = pattern worth copying for our own larger skills
+- Will-triage: installed; deeper vendoring into jarvis-substrate repo = Will's call (repo-bloat tradeoff)
