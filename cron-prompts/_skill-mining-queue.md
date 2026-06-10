@@ -4,7 +4,7 @@ Entries appended by skill-mining sweeps (`skill-mining.md`). Promote → work on
 Public mirror — partner-specific references scrubbed per the loop's scrub-list.
 
 ## [2026-06-10 17:25 ET] — LLMLingua-2 lossy token-drop compression for prose-heavy boot/warm files
-- Source: https://github.com/microsoft/LLMLingua (MIT, active, fetched + verified)
+- Source: https://github.com/microsoft/LLMLingua (MIT; model microsoft/llmlingua-2-xlm-roberta-large-meetingbank; API compress_prompt(rate=0.33); v0.2.2 latest release -- fetch-verified)
 - Technique: XLM-RoBERTa token classifier drops low-value tokens; `PromptCompressor(...).compress_prompt(text, rate=0.33)`; 2-5x compression typical in production, task-agnostic
 - Port class: REINTERPRET — complements HIERO, doesn't replace it. HIERO = semantic density at write-time; LLMLingua-2 = mechanical token-drop at load-time for files HIERO doesn't govern (warm memory prose, archived session-state epochs, paper drafts fed as context)
 - Our substrate state: L4 corpus-cache reports 9,293 tok across 9 boot files; warm files load on situation-match uncompressed
@@ -12,7 +12,7 @@ Public mirror — partner-specific references scrubbed per the loop's scrub-list
 - Will-triage: pending
 
 ## [2026-06-10 17:25 ET] — Graphiti bi-temporal fact-invalidation pattern for memory staleness
-- Source: https://github.com/getzep/graphiti (Apache-2.0, v0.29.2 June 2026, 24k stars, fetched + verified)
+- Source: https://github.com/getzep/graphiti (Apache-2.0, v0.29.2 June 2026, 27.3k stars at verify-time, fetched + verified)
 - Technique: every fact carries a validity window; new contradicting info INVALIDATES (not deletes) old facts; queries answer "true now" vs "true at time T"; provenance links to source episodes
 - Port class: full stack = DROP (needs Neo4j/FalkorDB + LLM-API ingestion — server infra we reject for local substrate). The bi-temporal PATTERN = REINTERPRET: `valid_from:` / `invalidated_by: <memory-slug>` frontmatter on memory primitives; staleness reminders become structural instead of age-heuristic
 - Our substrate state: every memory read injects age-warnings ("X days old, verify before asserting"); the Hindsight CLI has 80 contradiction candidates pending — fact-invalidation is exactly the resolution mechanic for that queue. Converges with an active external research thread on bi-temporal KGs
@@ -44,7 +44,7 @@ Public mirror — partner-specific references scrubbed per the loop's scrub-list
 
 ## [2026-06-10 17:25 ET] — FRONTEND: framer-motion is now "Motion" (package consolidation) + Vite 8 / Tailwind v4 upgrade horizon
 - Source: 2026 animation-library + stack roundups (search-level; fetch changelogs before acting)
-- Technique: framer-motion rebranded/merged → `motion` (Motion One merged in, ~6M weekly downloads, still the React default); Vite is at v8 (we run 5); Tailwind v4 (Jan 2025) drops tailwind.config.js for `@tailwindcss/vite` plugin; React Transition Group unmaintained (we don't use it)
+- Technique: framer-motion rebranded/merged → `motion` (Motion One merged in, ~6M weekly downloads, still the React default); Vite at v8.0.16 (fetch-verified releases page 2026-06-10; we run 5); Tailwind v4 (Jan 2025) drops tailwind.config.js for `@tailwindcss/vite` plugin; React Transition Group unmaintained (we don't use it)
 - Port class: REINTERPRET — staged upgrade path, not urgent. Aesthetic is locked; libraries beneath it can move
 - Our substrate state: frontend on React 18 + Vite 5 + framer-motion; deployed on Vercel; no CI on frontend
 - Suggested action: low-priority upgrade spike branch (motion rename first — mechanical; Vite 5→8 + Tailwind v4 together — needs the ship-web checklist after)
@@ -56,4 +56,17 @@ Public mirror — partner-specific references scrubbed per the loop's scrub-list
   1. /critical-qa upgrade: route grading through a verifier subagent (independent context) instead of same-context hostile Q&A
   2. Loop-audit: run the 5-part checklist over all active loops (odysseus, skill-mining, autonomous-continue, WORK chain) — verify each has explicit goal + feedback + stop-condition
 - Our substrate state: RSAW already does maker≠checker; "surfaced xN, unactioned" anticipation telemetry = measurable consult-step failure
+- Will-triage: pending
+
+## [2026-06-10 18:20 ET] — Will-fed: NousResearch hermes-agent — FTS5 recall + skill-creation loop + provider-agnostic gateway
+- Source: https://github.com/NousResearch/hermes-agent (MIT, fetch-verified README 2026-06-10)
+- Technique(s), port-classified:
+  - **FTS5 session search + LLM summarization for cross-session recall** -> REINTERPRET, strong: SQLite FTS5 keyword search over session transcripts as the sparse half of hybrid retrieval; our deep-recall.py is dense-embedding only. Local, zero infra, stdlib sqlite3.
+  - **Autonomous skill creation post-task** (closed learning loop) -> REINTERPRET: we extract memory primitives (R2) but not runnable skills; candidate: post-task pass that promotes repeated procedures to SKILL.md files. Compatible with open agentskills.io standard (interop note).
+  - **Provider-agnostic model switch** (`hermes model`, 200+ models via OpenRouter etc., no code change) -> reference implementation for the replace-the-model-tomorrow sovereignty test + the model-tier auto-assign coordination mechanism.
+  - **Multi-platform gateway** (one agent: TG/Discord/Slack/Signal/CLI) -> REINTERPRET reference for jarvis-bot TG growth path.
+  - **Serverless hibernating sandboxes** (Modal/Daytona) -> DROP for local-first substrate; note for Fly.io app if scale ever demands.
+  - **Agent-curated memory w/ periodic nudges** -> CONVERGENT-VALIDATION of our anticipation-hook + deep-recall nudge stack.
+- Our substrate state: dense-only recall; primitives-not-skills extraction; TG bot single-platform; model = Claude-weights (sovereignty partial)
+- Suggested action: (1) zero-risk spike: FTS5 index over session jsonl transcripts on a scratch DB, measure recall delta vs deep-recall.py alone; (2) read their skills+memory modules before any deeper port
 - Will-triage: pending

@@ -63,6 +63,14 @@ Self-perpetuation before any other work. Identical to odysseus-discovery C1, mar
 - Empty sweeps are valid — a dry day gets one log line, no fabricated finds
 - Auto-act only on zero-risk local experiments (e.g. benchmark a compression idea on a scratch copy); anything touching live hooks/memory/settings = Will-triage
 
+### Verifier stage — maker ≠ checker (per [F·design-loops-not-prompts], added 2026-06-10)
+Before committing queue entries, dispatch ONE verifier subagent in an independent context (haiku/sonnet tier). It receives only the drafted queue entries + this rubric, NOT the sweep transcript:
+1. Source actually fetched, or honestly marked search-level?
+2. Numbers honest (typical-case, not peak/marketing)?
+3. Port-class defensible — would DROP/REINTERPRET survive a skeptic?
+4. Suggested action concrete + correctly bucketed (zero-risk auto vs Will-triage)?
+Verifier returns per-entry PASS / REVISE(reason). Revise before commit; log verifier verdict in the sweep row. The sweep's "done" is the verifier's claim, not the miner's.
+
 ---
 
 ### Public-propagation requirement (Will, 2026-06-10: "push everything you adopt to the jarvis repo")
