@@ -78,3 +78,16 @@ Public mirror — partner-specific references scrubbed per the loop's scrub-list
 - Our substrate state: vibeswap locked aesthetic existed; no general design-discipline skill, no deck-generation skill (decks were hand-built; /ship-web covers verification only)
 - Note: frontend-slides' progressive-disclosure structure (map first, reveal per-phase) = pattern worth copying for our own larger skills
 - Will-triage: installed; deeper vendoring into jarvis-substrate repo = Will's call (repo-bloat tradeoff)
+
+## [2026-06-10 19:05 ET] — REFERENCE-ADOPTED: ui-agents prompt collection + frontend-design-toolkit catalog (Will-fed)
+- Source: https://github.com/mustafakendiguzel/claude-code-ui-agents (MIT; categorized UI/UX prompt collection, paste-to-use format) + https://github.com/wilwaldon/Claude-Code-Frontend-Design-Toolkit (MIT; 70+ tool catalog across skills/MCP/config — recommends anthropic/frontend-design plugin as essential)
+- Port class: REFERENCE — not installed wholesale (prompt collections, not native skills); mine per-need during frontend work. Toolkit's top recommendation (official frontend-design plugin) noted for Will-triage.
+- Suggested action: during the vibeswap frontend reimagine pass, pull specific ui-agents prompts (components/animations/accessibility categories) as needed; consider `claude plugin add anthropic/frontend-design` (official, ~100 tok at boot)
+- Will-triage: pending (plugin install decision)
+
+## [2026-06-10 19:05 ET] — ADOPTED: token-spend audit toolkit (cprkrn gist, Will-fed "should we add this?")
+- Source: https://gist.github.com/cprkrn/d3f128a8e8e3ddfa4b38934edff34d42 (fetch-verified; ~400 LOC, 3 scripts)
+- Technique: (1) analyze_claude_usage.py — transcript burn-rate audit (author's finding: 96% of spend = re-reading history; 4 immortal chats = 71% of cost); (2) statusline context meter w/ color thresholds; (3) context-rotation-hook — auto-prompts state-handoff at 200k tokens
+- Port class: (1) DIRECT-PORT installed at ~/.claude/tools/token-audit/ (read-only, zero-risk); (2) MERGE candidate into existing statusline-command.sh; (3) STRUCTURAL WIN pending triage — promotes our memory-level 50pct-reboot rule to hook-level per [P·always-equals-gate]; threshold should be OUR ~50% not their 200k
+- Our substrate state: 50pct-reboot lives in memory only (un-hooked); REBOOT protocol manual; no transcript cost analyzer
+- Will-triage: pending (rotation-hook registration = settings.json change)
