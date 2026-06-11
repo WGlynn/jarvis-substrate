@@ -74,7 +74,7 @@ Verifier returns per-entry PASS / REVISE(reason). Revise before commit; log veri
 ---
 
 ### Public-propagation requirement (Will, 2026-06-10: "push everything you adopt to the jarvis repo")
-After any write to `skill-mining.md`, `_skill-mining-log.md`, `_skill-mining-queue.md`, or `_primitives-pending.md`, copy the changed files into `C:/Users/Will/jarvis-os-public/cron-prompts/` and push to `WGlynn/jarvis-substrate` within the same tick. **Scrub-list applies to the public copies**: no partner names, no thread-IDs tied to partners, no `nda-locked/` content, no engagement specifics — replace with generic phrasing ("an active external research thread"). Anything ADOPTED from a sweep (a hook, a script, a convention) ships to the public repo in the same commit cycle it lands locally.
+After any write to `skill-mining.md`, `_skill-mining-log.md`, `_skill-mining-queue.md`, or `_primitives-pending.md`, copy the changed files into `C:/Users/Will/jarvis-os-public/cron-prompts/` and push to `WGlynn/jarvis-substrate` within the same tick. **Scrub-list applies to the public copies**: no partner names, no thread-IDs tied to partners, no locked-engagement content, no engagement specifics — replace with generic phrasing ("an active external research thread"). Anything ADOPTED from a sweep (a hook, a script, a convention) ships to the public repo in the same commit cycle it lands locally.
 
 ---
 
