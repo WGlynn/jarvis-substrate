@@ -41,3 +41,9 @@ Original receipt preserved below:
 - Candidate primitive: ∀ external find that matches existing substrate pattern → classify as CONVERGENT-VALIDATION (not duplicate, not adoption). Extract: (a) naming, (b) mechanic delta, (c) evidence-of-pattern-realness for partner-facing material. Never rip out working substrate to adopt the external implementation.
 - Composes with: [P·substrate-port-pattern] (4th implicit class), [P·structure-does-the-work], [F·everything-needs-a-staleness-check]
 - Status: pending Will-triage
+
+## [2026-06-10 18:55 ET] — substrate-sync surfaced: cron-prompt state files bypassed the content scrub-list
+- Trigger: substrate-sync tick (dry-run inspection before --apply)
+- Observation: sync_dir() applied SCRUB_CONTENT_PATTERNS to memory/ only; cron-prompts/ mirrored unfiltered. Skill-mining queue/log (new today) accumulate partner context exactly like memory files do, and would have leaked a partner name + thread-ID to the public monorepo this tick. Also: bare partner first names and chat-thread IDs were not in the pattern list (only full handles), and a loop file mentioning the scrub-rule by name self-triggered the nda-locked pattern (recoverable false-positive class).
+- Candidate primitive: ∀ mirror-to-public path ⇒ same content scrub-list, no per-directory exceptions; state files that ACCUMULATE text (queues, logs) are higher-leak-risk than static prompts and must never get an unfiltered mirror lane. Fixed in sync-public-substrate.py this tick (sync_dir content_scrub flag + Rick TG/Felix/#2858 patterns).
+- Status: pending Will-triage
